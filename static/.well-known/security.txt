@@ -1,0 +1,5 @@
+# RFC 9116 security.txt for higuoxing.com
+Contact: mailto:higuoxing+security@gmail.com
+Expires: 2028-01-01T00:00:00.000Z
+Preferred-Languages: en, zh
+Canonical: https://higuoxing.com/.well-known/security.txt

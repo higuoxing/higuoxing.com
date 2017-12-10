@@ -3,5 +3,13 @@ Thumbs.db
 db.json
 *.log
 node_modules/
-public/
 .deploy*/
+yarn.lock
+.vuepress/dist
+package-lock.json
+public/
+.hugo_build.lock
+resources/
+.claude/
+.secrets/
+

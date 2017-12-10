@@ -1,0 +1,70 @@
+baseURL = "https://higuoxing.com/"
+title = "@higuoxing's site"
+theme = "planet"
+defaultContentLanguage = "en"
+locale = "en"
+capitalizeListTitles = false
+
+[taxonomies]
+  tag = "tags"
+
+[params]
+  author = "@higuoxing"
+  description = "Notes on fun things."
+  favicon_url = "/favicon.png"
+  avatar_url = "/avatar.png"
+
+  [params.style]
+    theme_color = "#0f1424"
+    accent = "#336bad"
+    accent_strong = "#26548b"
+    accent_soft = "rgba(51, 107, 173, 0.12)"
+    accent_contrast = "#ffffff"
+    dark_accent = "#6699ff"
+    dark_accent_strong = "#8ab0ff"
+    dark_accent_soft = "rgba(102, 153, 255, 0.15)"
+    dark_accent_contrast = "#0b1120"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    noClasses = false
+
+[minify]
+  minifyOutput = true
+
+# LLM / AI Agent friendly output formats (llms.txt, llms-full.txt, and raw .md endpoints)
+[mediaTypes]
+  [mediaTypes."text/markdown"]
+    suffixes = ["md"]
+  [mediaTypes."text/plain"]
+    suffixes = ["txt"]
+
+[outputFormats]
+  # Raw Markdown endpoint per page (e.g. /archive/post/index.md)
+  [outputFormats.Markdown]
+    mediaType = "text/markdown"
+    baseName = "index"
+    isPlainText = true
+  # AI summary and sitemap at /llms.txt
+  [outputFormats.LLMS]
+    mediaType = "text/plain"
+    baseName = "llms"
+    isPlainText = true
+  # Consolidated full-content dump at /llms-full.txt
+  [outputFormats.LLMSFull]
+    mediaType = "text/plain"
+    baseName = "llms-full"
+    isPlainText = true
+
+[outputs]
+  home = ["HTML", "RSS", "LLMS", "LLMSFull"]
+  page = ["HTML", "Markdown"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]

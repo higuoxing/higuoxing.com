@@ -1,0 +1,3 @@
+[submodule "themes/planet"]
+	path = themes/planet
+	url = https://github.com/higuoxing/planet
